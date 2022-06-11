@@ -47,7 +47,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true);
     }
-  },[screenSize]);
+  },[screenSize, setActiveMenu]);
   
   useEffect(() => {
     if (screenSize <= 900) {
@@ -56,7 +56,7 @@ const Navbar = () => {
       setActiveMenu(true)
     }
 
-  },[screenSize])
+  },[screenSize, setActiveMenu])
   
 
   return (
@@ -73,7 +73,7 @@ const Navbar = () => {
 
         <NavButton 
           title="Chat"
-          dotColor="red"
+          dotColor="#03C9D7"
           customFunc={() => handleClick('chat')}
           color="blue"
           icon={<BsChatLeft />}
@@ -81,7 +81,7 @@ const Navbar = () => {
 
         <NavButton 
           title="Notification"
-          dotColor="red"
+          dotColor="#03C9D7"
           customFunc={() => handleClick('notification')}
           color="blue"
           icon={<RiNotification3Line />}
